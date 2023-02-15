@@ -1,0 +1,9 @@
+# O código presente neste repositório é um exemplo de implementação do padrão de projeto Chain of Responsibility em Java.
+
+Especificamente, o exemplo consiste em um sistema que simula uma empresa de desenvolvimento de software. O sistema recebe pedidos de suporte e manutenção de sistemas de clientes e, em seguida, os encaminha para diferentes níveis de desenvolvedores, de acordo com a complexidade e a gravidade do problema relatado.
+
+O código contido na pasta "levels_devs/level_developer/src" é responsável pela implementação de um dos níveis de desenvolvedores do sistema. Este nível é representado pela classe "DeveloperLevel", que implementa a interface "SupportHandler". A interface "SupportHandler" contém um único método, chamado "handleRequest", que é responsável por receber os pedidos de suporte e encaminhá-los para o próximo nível apropriado, ou para encerrar o processamento se o nível atual for capaz de lidar com a solicitação.
+
+A classe "DeveloperLevel" contém um campo para armazenar o próximo nível de desenvolvedor a ser contatado, caso a solicitação não possa ser atendida pelo desenvolvedor atual. Também contém um método "handleRequest", que verifica se a solicitação atual pode ser atendida pelo desenvolvedor atual ou se deve ser encaminhada para o próximo nível na cadeia de responsabilidade.
+
+Assim, o padrão Chain of Responsibility é implementado em cada nível de desenvolvedores do sistema, permitindo que as solicitações sejam tratadas de forma hierárquica e escalonada. Dessa forma, o sistema pode lidar com solicitações de suporte de maneira eficiente, atribuindo-as ao nível mais apropriado de desenvolvedor e garantindo que cada solicitação seja atendida da melhor forma possível.
